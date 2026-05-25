@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Menu & Order — Jay's Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="promo-bar">
+  <i class="fas fa-motorcycle"></i>
+  <span>FREE DELIVERY every <strong>Wednesday</strong> on orders above <strong>LSL 70</strong></span>
+  <i class="fas fa-motorcycle"></i>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+       <div class=""><img src="logo.jpg" alt="Jay's Restaurant Logo" class="logo-img"></div>
+      <div class="logo-text">
+        <span class="logo-name">Jay's</span>
+        <span class="logo-sub">Restaurant</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="specials.html">Specials & Drinks</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-toggle" onclick="toggleCart()">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="page-hero-content">
+    <span class="section-tag">Explore Our Offerings</span>
+    <h1>Our Menu</h1>
+    <p>Fresh, flavourful meals made with care — every single day</p>
+  </div>
+</div>
+
+<!-- MENU GALLERY -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Menu Gallery</span>
+      <h2>Browse Our Menu</h2>
+      <p>Click any image to view in full detail</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('menu.jpg','Menu Page 1')">
+        <div class="gallery-img" style="background:linear-gradient(145deg,#4d0a00,#8B1a00);">
+          <img src="menu.jpg" alt="Menu 1" onerror="this.style.display='none'"/>
+          <div class="gallery-fallback"><i class="fas fa-book-open"></i><span>Menu Page 1</span></div>
+        </div>
+        <div class="gallery-overlay"><i class="fas fa-expand-alt"></i> View</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('menu2.jpg','Menu Page 2')">
+        <div class="gallery-img" style="background:linear-gradient(145deg,#1a0a00,#3d1500);">
+          <img src="menu2.jpg" alt="Menu 2" onerror="this.style.display='none'"/>
+          <div class="gallery-fallback"><i class="fas fa-book-open"></i><span>Menu Page 2</span></div>
+        </div>
+        <div class="gallery-overlay"><i class="fas fa-expand-alt"></i> View</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('menu3.jpg','Menu Page 3')">
+        <div class="gallery-img" style="background:linear-gradient(145deg,#3d0a00,#6b1a00);">
+          <img src="menu3.jpg" alt="Menu 3" onerror="this.style.display='none'"/>
+          <div class="gallery-fallback"><i class="fas fa-book-open"></i><span>Menu Page 3</span></div>
+        </div>
+        <div class="gallery-overlay"><i class="fas fa-expand-alt"></i> View</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('menu4.jpg','Menu Page 4')">
+        <div class="gallery-img" style="background:linear-gradient(145deg,#1a0505,#4d1000);">
+          <img src="menu4.jpg" alt="Menu 4" onerror="this.style.display='none'"/>
+          <div class="gallery-fallback"><i class="fas fa-book-open"></i><span>Menu Page 4</span></div>
+        </div>
+        <div class="gallery-overlay"><i class="fas fa-expand-alt"></i> View</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('menu5.jpg','Menu Page 5')">
+        <div class="gallery-img" style="background:linear-gradient(145deg,#2d0800,#5c1500);">
+          <img src="menu5.jpg" alt="Menu 5" onerror="this.style.display='none'"/>
+          <div class="gallery-fallback"><i class="fas fa-book-open"></i><span>Menu Page 5</span></div>
+        </div>
+        <div class="gallery-overlay"><i class="fas fa-expand-alt"></i> View</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('menu6.jpg','Menu Page 6')">
+        <div class="gallery-img" style="background:linear-gradient(145deg,#1a0200,#4d0a00);">
+          <img src="menu6.jpg" alt="Menu 6" onerror="this.style.display='none'"/>
+          <div class="gallery-fallback"><i class="fas fa-book-open"></i><span>Menu Page 6</span></div>
+        </div>
+        <div class="gallery-overlay"><i class="fas fa-expand-alt"></i> View</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <img id="lightboxImg" src="" alt=""/>
+    <p id="lightboxCaption"></p>
+  </div>
+</div>
+
+<!-- ORDER SECTION -->
+<section class="section order-section" id="order">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Place Your Order</span>
+      <h2>Order Now</h2>
+      <p>Add items below, then checkout for delivery or pickup</p>
+    </div>
+    <div class="order-layout">
+      <!-- MENU ITEMS -->
+      <div class="order-items">
+        <div class="order-category">
+          <h3 class="cat-title"><i class="fas fa-drumstick-bite"></i> Meals & Combos</h3>
+          <div class="order-cards">
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#8B0000,#cc3300);">
+                <img src="fd1.jpg" alt="Cheesy Wings" onerror="this.style.display='none'"/>
+                <i class="fas fa-drumstick-bite oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>Cheesy Wings Combo</h4>
+                <p>Crispy cheesy wings + can of Coke</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 95</span>
+                  <button onclick="addToCart('Cheesy Wings Combo', 95)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#7a1000,#b33000);">
+                <img src="clc.jpg" alt="Chomi le Chomi" onerror="this.style.display='none'"/>
+                <i class="fas fa-people-group oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>Chomi le Chomi Tuesday</h4>
+                <p>Special sharing combo for two</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 150–220</span>
+                  <button onclick="addToCart('Chomi le Chomi Combo', 150)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#5c2000,#993300);">
+                <img src="mixed.jpg" alt="10 Pieces" onerror="this.style.display='none'"/>
+                <i class="fas fa-utensils oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>10 Pieces + Fries + Salad</h4>
+                <p>Large combo with fries and fresh salad</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 245</span>
+                  <button onclick="addToCart('10 Pieces Combo', 245)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#1a0a00,#4d1a00);">
+                <img src="p4.jpg" alt="Platter for 4" onerror="this.style.display='none'"/>
+                <i class="fas fa-star oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>Platter for 4</h4>
+                <p>Generous sharing platter for families</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 580</span>
+                  <button onclick="addToCart('Platter for 4', 580)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-category">
+          <h3 class="cat-title"><i class="fas fa-wine-glass-alt"></i> Drinks</h3>
+          <div class="order-cards">
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#3d0015,#800030);">
+                <img src="wine.jpg" alt="Mulled Wine" onerror="this.style.display='none'"/>
+                <i class="fas fa-wine-glass-alt oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>Mulled Wine</h4>
+                <p>Warm spiced red wine with cinnamon & cloves</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 35</span>
+                  <button onclick="addToCart('Mulled Wine', 35)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#003d1a,#006b30);">
+                <img src="bev.jpg" alt="Beverage" onerror="this.style.display='none'"/>
+                <i class="fas fa-glass-water oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>Cold Beverages</h4>
+                <p>Refreshing cold drinks and juices</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 20–35</span>
+                  <button onclick="addToCart('Cold Beverage', 25)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="order-card">
+              <div class="oc-img" style="background:linear-gradient(135deg,#2d1a00,#4d2d00);">
+                <img src="bev2.jpg" alt="Coffee" onerror="this.style.display='none'"/>
+                <i class="fas fa-mug-hot oc-icon"></i>
+              </div>
+              <div class="oc-info">
+                <h4>Coffee</h4>
+                <p>Hot brewed coffee to warm your day</p>
+                <div class="oc-footer">
+                  <span class="oc-price">LSL 25–40</span>
+                  <button onclick="addToCart('Coffee', 30)" class="add-btn-sm"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CART PANEL -->
+      <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+          <h3><i class="fas fa-shopping-bag"></i> Your Order</h3>
+          <span class="cart-count-badge" id="cartCountBadge">0 items</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <div class="cart-empty">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Your order is empty</p>
+            <span>Add items from the menu</span>
+          </div>
+        </div>
+        <div class="cart-summary" id="cartSummary" style="display:none;">
+          <div class="cart-total">
+            <span>Total</span>
+            <strong id="cartTotal">LSL 0</strong>
+          </div>
+          <div class="delivery-note" id="wedNote" style="display:none;">
+            <i class="fas fa-motorcycle"></i> Free delivery today (Wednesday)!
+          </div>
+
+          <!-- DELIVERY TYPE -->
+          <div class="delivery-toggle">
+            <button class="dtog active" id="togDelivery" onclick="setDelivery('delivery')"><i class="fas fa-motorcycle"></i> Delivery</button>
+            <button class="dtog" id="togPickup" onclick="setDelivery('pickup')"><i class="fas fa-store"></i> Pickup</button>
+          </div>
+
+          <div id="deliveryForm">
+            <input type="text" placeholder="Your name" id="custName" class="cart-input"/>
+            <input type="tel" placeholder="Phone number" id="custPhone" class="cart-input"/>
+            <input type="text" placeholder="Delivery address" id="custAddress" class="cart-input" id="addrField"/>
+            <textarea placeholder="Any delivery notes..." rows="2" class="cart-input" id="custNotes"></textarea>
+          </div>
+
+          <button class="btn-primary full-btn" onclick="placeOrder()"><i class="fas fa-check"></i> Confirm Order</button>
+          <a id="waOrderBtn" href="#" target="_blank" class="btn-whatsapp full-btn" style="margin-top:8px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOATING CART (mobile) -->
+<button class="float-cart" onclick="scrollToOrder()" id="floatCart" style="display:none;">
+  <i class="fas fa-shopping-bag"></i>
+  <span id="floatCartCount">0</span>
+</button>
+
+<a href="https://wa.me/26658141890" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">J</div>
+        <div class="logo-text">
+          <span class="logo-name">Jay's</span>
+          <span class="logo-sub">Restaurant</span>
+        </div>
+      </div>
+      <p class="footer-slogan">"Good Food, Local Flavor"</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/jaysrestaurantLS" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/26658141890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:jaysrestaurant2@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="specials.html">Specials & Drinks</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <h5>Opening Hours</h5>
+      <p>Monday – Sunday</p>
+      <p><strong>8:00 AM – 8:00 PM</strong></p>
+    </div>
+    <div class="footer-contact">
+      <h5>Contact</h5>
+      <p><i class="fas fa-phone"></i> +266 5814 1890</p>
+      <p><i class="fas fa-envelope"></i> jaysrestaurant2@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Jay's Restaurant. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+// Lightbox
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption;
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+
+function scrollToOrder() {
+  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>

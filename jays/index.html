@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jay's Restaurant — Good Food, Local Flavor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- FREE DELIVERY BANNER -->
+<div class="promo-bar">
+  <i class="fas fa-motorcycle"></i>
+  <span>FREE DELIVERY every <strong>Wednesday</strong> on orders above <strong>LSL 70</strong></span>
+  <i class="fas fa-motorcycle"></i>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+   
+      <div class=""><img src="logo.jpg" alt="Jay's Restaurant Logo" class="logo-img"></div>
+      <div class="logo-text">
+        <span class="logo-name">Jay's</span>
+        <span class="logo-sub">Restaurant</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html">Specials & Drinks</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="menu.html" class="btn-order">Order Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i class="fas fa-star"></i> Maseru's Favourite Restaurant
+    </div>
+    <h1 class="hero-title">
+      Good Food,<br/><em>Local Flavor</em>
+    </h1>
+    <p class="hero-desc">Fresh, hearty meals crafted with love in the heart of Maseru. Dine in, take out, or let us deliver right to your door.</p>
+    <div class="hero-cta">
+      <a href="menu.html" class="btn-primary"><i class="fas fa-utensils"></i> View Menu</a>
+      <a href="menu.html#order" class="btn-gold"><i class="fas fa-shopping-bag"></i> Order Now</a>
+      <a href="https://wa.me/26658141890" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+    <div class="hero-promo-pill">
+      <i class="fas fa-truck"></i> Free Delivery Wednesdays · Orders above LSL 70
+    </div>
+  </div>
+  <div class="hero-scroll"><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- SERVICES STRIP -->
+<section class="services-strip">
+  <div class="strip-grid">
+    <div class="strip-item"><i class="fas fa-chair"></i><span>Dine-In</span></div>
+    <div class="strip-item"><i class="fas fa-shopping-bag"></i><span>In-Store Pickup</span></div>
+    <div class="strip-item"><i class="fas fa-umbrella-beach"></i><span>Outdoor Seating</span></div>
+    <div class="strip-item"><i class="fas fa-motorcycle"></i><span>Home Delivery</span></div>
+    <div class="strip-item"><i class="fab fa-whatsapp"></i><span>WhatsApp Orders</span></div>
+  </div>
+</section>
+
+<!-- FEATURED MEALS -->
+<section class="section featured" id="featured">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">House Favourites</span>
+      <h2>Featured Meals</h2>
+      <p>Crowd-pleasing dishes that keep our customers coming back</p>
+    </div>
+    <div class="meals-grid">
+
+      <div class="meal-card" data-item="Cheesy Wings Combo" data-price="95">
+        <div class="meal-img" style="background:linear-gradient(145deg,#8B0000,#cc3300);">
+          <img src="fd1.jpg" alt="Cheesy Wings" onerror="this.style.display='none'"/>
+          <div class="meal-img-icon"><i class="fas fa-drumstick-bite"></i></div>
+        </div>
+        <div class="meal-info">
+          <div class="meal-top">
+            <h3>Cheesy Wings Combo</h3>
+            <span class="price">LSL 95</span>
+          </div>
+          <p>Crispy cheesy wings served with a refreshing can of Coke.</p>
+          <button class="add-btn" onclick="addToCart('Cheesy Wings Combo', 95)"><i class="fas fa-plus"></i> Add to Order</button>
+        </div>
+      </div>
+
+      <div class="meal-card highlight-card">
+        <div class="special-badge"><i class="fas fa-fire"></i> Tuesday Special</div>
+        <div class="meal-img" style="background:linear-gradient(145deg,#7a1000,#b33000);">
+          <img src="clc.jpg" alt="Chomi le Chomi" onerror="this.style.display='none'"/>
+          <div class="meal-img-icon"><i class="fas fa-people-group"></i></div>
+        </div>
+        <div class="meal-info">
+          <div class="meal-top">
+            <h3>Chomi le Chomi Tuesday</h3>
+            <span class="price">LSL 150–220</span>
+          </div>
+          <p>Special Tuesday combo perfect for sharing with your bestie.</p>
+          <button class="add-btn" onclick="addToCart('Chomi le Chomi Combo', 150)"><i class="fas fa-plus"></i> Add to Order</button>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-img" style="background:linear-gradient(145deg,#5c2000,#993300);">
+          <img src="mixed.jpg" alt="10 Pieces Combo" onerror="this.style.display='none'"/>
+          <div class="meal-img-icon"><i class="fas fa-utensils"></i></div>
+        </div>
+        <div class="meal-info">
+          <div class="meal-top">
+            <h3>10 Pieces + Fries + Salad</h3>
+            <span class="price">LSL 245</span>
+          </div>
+          <p>Large satisfying combo meal with crispy fries and fresh salad.</p>
+          <button class="add-btn" onclick="addToCart('10 Pieces Combo', 245)"><i class="fas fa-plus"></i> Add to Order</button>
+        </div>
+      </div>
+
+      <div class="meal-card">
+        <div class="meal-img" style="background:linear-gradient(145deg,#3d0015,#800030);">
+          <img src="wine.jpg" alt="Mulled Wine" onerror="this.style.display='none'"/>
+          <div class="meal-img-icon"><i class="fas fa-wine-glass-alt"></i></div>
+        </div>
+        <div class="meal-info">
+          <div class="meal-top">
+            <h3>Mulled Wine</h3>
+            <span class="price">LSL 35</span>
+          </div>
+          <p>Warm spiced red wine with cinnamon, cloves, star anise & citrus.</p>
+          <button class="add-btn" onclick="addToCart('Mulled Wine', 35)"><i class="fas fa-plus"></i> Add to Order</button>
+        </div>
+      </div>
+
+      <div class="meal-card wide-card">
+        <div class="meal-img" style="background:linear-gradient(145deg,#1a0505,#4d1a00);">
+          <img src="p4.jpg" alt="Platter for 4" onerror="this.style.display='none'"/>
+          <div class="meal-img-icon"><i class="fas fa-star"></i></div>
+        </div>
+        <div class="meal-info">
+          <div class="meal-top">
+            <h3>Platter for 4</h3>
+            <span class="price">LSL 580</span>
+          </div>
+          <p>Large sharing platter ideal for families and groups. The ultimate feast!</p>
+          <button class="add-btn" onclick="addToCart('Platter for 4', 580)"><i class="fas fa-plus"></i> Add to Order</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="menu.html" class="btn-primary">Full Menu <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CHOMI LE CHOMI PROMO BANNER -->
+<section class="promo-section">
+  <div class="promo-inner">
+    <div class="promo-text">
+      <span class="promo-tag">Every Tuesday</span>
+      <h2>Chomi le Chomi Tuesday</h2>
+      <p>Bring your bestie and enjoy our special combo deal — great food, great company, unbeatable value.</p>
+      <div class="promo-price">LSL 150 – LSL 220</div>
+      <a href="menu.html#order" class="btn-gold"><i class="fas fa-shopping-bag"></i> Order This Deal</a>
+    </div>
+    <div class="promo-img" style="background:linear-gradient(145deg,#6b0000,#cc2200);">
+      <img src="clc.jpg" alt="Chomi le Chomi" onerror="this.style.display='none'"/>
+      <div class="promo-img-placeholder"><i class="fas fa-fire" style="font-size:4rem;color:#ffd700;"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip">
+  <div class="container about-grid">
+    <div class="about-text">
+      <span class="section-tag">About Us</span>
+      <h2>Your Neighbourhood Restaurant</h2>
+      <p>Jay's Restaurant is a beloved local spot in Maseru, Lesotho, known for hearty meals, warm hospitality, and an atmosphere that feels like home. Whether you're dining with family, catching up with friends, or grabbing a quick meal, we've got you covered.</p>
+      <p>We pride ourselves on quality ingredients, generous portions, and food that satisfies — every time.</p>
+      <div class="about-stats">
+        <div class="stat"><strong>8AM–8PM</strong><span>Daily</span></div>
+        <div class="stat"><strong>4</strong><span>Services</span></div>
+        <div class="stat"><strong>100%</strong><span>Local Flavor</span></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-card-stack">
+        <div class="acard acard1" style="background:linear-gradient(135deg,#8B0000,#cc2200);">
+          <i class="fas fa-heart"></i>
+          <p>Made with love in Maseru</p>
+        </div>
+        <div class="acard acard2" style="background:linear-gradient(135deg,#1a0a00,#3d1500);">
+          <i class="fas fa-motorcycle"></i>
+          <p>Own delivery riders</p>
+        </div>
+        <div class="acard acard3" style="background:linear-gradient(135deg,#7a5c00,#b38600);">
+          <i class="fas fa-star"></i>
+          <p>Quality guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="section reservation-section" id="reservation">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Book a Table</span>
+      <h2>Reserve Your Spot</h2>
+      <p>Book ahead and we'll have everything ready for your arrival</p>
+    </div>
+    <div class="reservation-grid">
+      <form class="res-form" onsubmit="submitReservation(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" placeholder="Your name" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="tel" placeholder="+266 XXXX XXXX" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-calendar"></i> Date</label>
+            <input type="date" required/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-clock"></i> Time</label>
+            <input type="time" min="08:00" max="20:00" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-users"></i> Number of Guests</label>
+            <select required>
+              <option value="">Select guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3-4 Guests</option>
+              <option>5-8 Guests</option>
+              <option>9+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-chair"></i> Seating Preference</label>
+            <select required>
+              <option value="">Select seating</option>
+              <option>Indoor</option>
+              <option>Outdoor</option>
+              <option>No Preference</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-comment"></i> Special Requests</label>
+          <textarea placeholder="Any special requests or dietary requirements?" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-btn"><i class="fas fa-calendar-check"></i> Confirm Reservation</button>
+      </form>
+      <div class="res-info">
+        <div class="res-info-card">
+          <i class="fas fa-clock"></i>
+          <h4>Opening Hours</h4>
+          <p>Monday – Sunday<br/><strong>8:00 AM – 8:00 PM</strong></p>
+        </div>
+        <div class="res-info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Location</h4>
+          <p>Opposite Lehakoe, near Puma Filling Station<br/><strong>Maseru 100, Lesotho</strong></p>
+        </div>
+        <div class="res-info-card">
+          <i class="fab fa-whatsapp"></i>
+          <h4>Quick Booking</h4>
+          <p>Prefer to book via WhatsApp?</p>
+          <a href="https://wa.me/26658141890?text=Hi!%20I'd%20like%20to%20make%20a%20reservation." target="_blank" class="btn-whatsapp-sm">Message Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get in Touch</span>
+      <h2>Find Us</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards">
+        <a href="tel:+26658141890" class="contact-card">
+          <i class="fas fa-phone"></i>
+          <div><h4>Call Us</h4><p>+266 5814 1890</p></div>
+        </a>
+        <a href="https://wa.me/26658141890" target="_blank" class="contact-card green">
+          <i class="fab fa-whatsapp"></i>
+          <div><h4>WhatsApp</h4><p>+266 5814 1890</p></div>
+        </a>
+        <a href="mailto:jaysrestaurant2@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <div><h4>Email</h4><p>jaysrestaurant2@gmail.com</p></div>
+        </a>
+        <a href="https://www.facebook.com/jaysrestaurantLS" target="_blank" class="contact-card blue">
+          <i class="fab fa-facebook-f"></i>
+          <div><h4>Facebook</h4><p>@jaysrestaurantLS</p></div>
+        </a>
+        <div class="contact-card wide-contact">
+          <i class="fas fa-map-marker-alt"></i>
+          <div><h4>Location</h4><p>Opposite Lehakoe, near Puma Filling Station, Maseru 100, Lesotho</p></div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <i class="fas fa-map-marked-alt"></i>
+        <p>Opposite Lehakoe<br/>near Puma Filling Station<br/><strong>Maseru 100, Lesotho</strong></p>
+        <a href="https://maps.google.com/?q=Maseru+Lesotho" target="_blank" class="btn-primary">
+          <i class="fas fa-directions"></i> Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">J</div>
+        <div class="logo-text">
+          <span class="logo-name">Jay's</span>
+          <span class="logo-sub">Restaurant</span>
+        </div>
+      </div>
+      <p class="footer-slogan">"Good Food, Local Flavor"</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/jaysrestaurantLS" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/26658141890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:jaysrestaurant2@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="specials.html">Specials & Drinks</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <h5>Opening Hours</h5>
+      <p>Monday – Sunday</p>
+      <p><strong>8:00 AM – 8:00 PM</strong></p>
+      <div class="open-badge"><i class="fas fa-circle"></i> Open Today</div>
+    </div>
+    <div class="footer-contact">
+      <h5>Contact</h5>
+      <p><i class="fas fa-phone"></i> +266 5814 1890</p>
+      <p><i class="fas fa-envelope"></i> jaysrestaurant2@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Maseru 100, Lesotho</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Jay's Restaurant. All Rights Reserved.</p>
+    <p>Made with <i class="fas fa-heart" style="color:#cc2200;"></i> in Maseru, Lesotho</p>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/26658141890" target="_blank" class="float-wa" title="WhatsApp Us">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button class="scroll-top" id="scrollTop" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

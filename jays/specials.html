@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Specials & Drinks — Jay's Restaurant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="promo-bar">
+  <i class="fas fa-motorcycle"></i>
+  <span>FREE DELIVERY every <strong>Wednesday</strong> on orders above <strong>LSL 70</strong></span>
+  <i class="fas fa-motorcycle"></i>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+       <div class=""><img src="logo.jpg" alt="Jay's Restaurant Logo" class="logo-img"></div>
+      <div class="logo-text">
+        <span class="logo-name">Jay's</span>
+        <span class="logo-sub">Restaurant</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="specials.html" class="active">Specials & Drinks</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="menu.html#order" class="btn-order">Order Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero page-hero-specials">
+ <div class="hero-bg"></div>
+  <div class="page-hero-content">
+    <span class="section-tag">Deals & Drinks</span>
+    <h1>Specials & Drinks</h1>
+    <p>Weekly promotions, seasonal beverages, and sweet treats</p>
+  </div>
+</div>
+
+<!-- WEEKLY SPECIALS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Weekly Promotions</span>
+      <h2>This Week's Specials</h2>
+      <p>Exclusive deals that make every day delicious</p>
+    </div>
+    <div class="specials-grid">
+
+      <!-- FREE DELIVERY WEDNESDAY -->
+      <div class="special-hero-card wednesday-card">
+        <div class="shc-decoration">
+          <div class="shc-circle c1"></div>
+          <div class="shc-circle c2"></div>
+        </div>
+        <div class="shc-icon"><i class="fas fa-motorcycle"></i></div>
+        <div class="shc-content">
+          <span class="day-badge wed-badge">Every Wednesday</span>
+          <h2>Free Delivery Wednesday</h2>
+          <p>Get your favourite meals delivered to your door at no extra cost every Wednesday when you spend above LSL 70.</p>
+          <div class="shc-price-tag">Orders above <strong>LSL 70</strong></div>
+          <a href="menu.html#order" class="btn-primary"><i class="fas fa-shopping-bag"></i> Order for Delivery</a>
+        </div>
+        <div class="shc-visual">
+          <div class="delivery-animation">
+            <i class="fas fa-motorcycle fa-3x"></i>
+            <div class="delivery-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHOMI LE CHOMI -->
+      <div class="special-hero-card chomi-card">
+        <div class="shc-decoration">
+          <div class="shc-circle c1"></div>
+          <div class="shc-circle c2"></div>
+        </div>
+        <div class="shc-icon"><i class="fas fa-fire"></i></div>
+        <div class="shc-content">
+          <span class="day-badge tue-badge">Every Tuesday</span>
+          <h2>Chomi le Chomi Tuesday</h2>
+          <p>Bring your bestie and dig into our exclusive Chomi le Chomi combo deal — generous portions, incredible taste, and perfect for sharing.</p>
+          <div class="shc-price-tag">From <strong>LSL 150 – LSL 220</strong></div>
+          <a href="menu.html#order" class="btn-gold"><i class="fas fa-shopping-bag"></i> Order This Deal</a>
+        </div>
+        <div class="shc-visual">
+          <div class="chomi-img-wrap">
+            <img src="clc.jpg" alt="Chomi le Chomi" onerror="this.style.display='none'"/>
+            <div class="chomi-fallback"><i class="fas fa-fire fa-3x" style="color:#ffd700;"></i></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DRINKS & DESSERTS -->
+<section class="section drinks-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Beverages & Treats</span>
+      <h2>Drinks & Desserts</h2>
+      <p>The perfect companions to your meal</p>
+    </div>
+
+    <!-- DRINKS TABS -->
+    <div class="drinks-tabs">
+      <button class="dtab active" onclick="showDrinkTab('coffee', this)"><i class="fas fa-mug-hot"></i> Coffee</button>
+      <button class="dtab" onclick="showDrinkTab('beverages', this)"><i class="fas fa-glass-water"></i> Beverages</button>
+      <button class="dtab" onclick="showDrinkTab('cakes', this)"><i class="fas fa-cake-candles"></i> Cakes</button>
+    </div>
+
+    <div class="drinks-grid" id="tab-coffee">
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#2d1a00,#5c3300);">
+          <img src="bev2.jpg" alt="Coffee" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-mug-hot"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Espresso</h4>
+          <p>Rich, bold single shot of our premium espresso blend.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 25</span><button class="add-btn-sm" onclick="addToCart('Espresso',25)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#1a0d00,#3d2000);">
+          <img src="bev2.jpg" alt="Cappuccino" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-mug-hot"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Cappuccino</h4>
+          <p>Creamy milk foam layered over rich espresso.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 35</span><button class="add-btn-sm" onclick="addToCart('Cappuccino',35)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#1a0a00,#3d1a00);">
+          <img src="bev2.jpg" alt="Latte" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-mug-hot"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Café Latte</h4>
+          <p>Smooth steamed milk with a shot of espresso.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 40</span><button class="add-btn-sm" onclick="addToCart('Café Latte',40)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drinks-grid" id="tab-beverages" style="display:none;">
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#003d00,#006b1a);">
+          <img src="bev.jpg" alt="Juice" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-glass-water"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Fresh Juice</h4>
+          <p>Chilled fresh-squeezed fruit juice of the day.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 20</span><button class="add-btn-sm" onclick="addToCart('Fresh Juice',20)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#3d0015,#800030);">
+          <img src="wine.jpg" alt="Mulled Wine" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-wine-glass-alt"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Mulled Wine</h4>
+          <p>Warm spiced red wine with cinnamon, cloves & citrus.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 35</span><button class="add-btn-sm" onclick="addToCart('Mulled Wine',35)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#001f3d,#003d7a);">
+          <img src="bev3.jpg" alt="Soft Drink" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-bottle-water"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Soft Drinks</h4>
+          <p>Assorted cold canned beverages and sodas.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 15</span><button class="add-btn-sm" onclick="addToCart('Soft Drink',15)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drinks-grid" id="tab-cakes" style="display:none;">
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#4d001a,#8B0030);">
+          <img src="bev3.jpg" alt="Chocolate Cake" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-cake-candles"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Chocolate Cake</h4>
+          <p>Rich, moist chocolate layer cake with ganache.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 45</span><button class="add-btn-sm" onclick="addToCart('Chocolate Cake',45)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#4d2d00,#7a4d00);">
+          <img src="bev.jpg" alt="Carrot Cake" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-cake-candles"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Carrot Cake</h4>
+          <p>Spiced carrot cake topped with cream cheese frosting.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 40</span><button class="add-btn-sm" onclick="addToCart('Carrot Cake',40)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+      <div class="drink-card">
+        <div class="drink-img" style="background:linear-gradient(145deg,#1a1a00,#3d3d00);">
+          <img src="bev2.jpg" alt="Lemon Tart" onerror="this.style.display='none'"/>
+          <div class="drink-icon"><i class="fas fa-lemon"></i></div>
+        </div>
+        <div class="drink-info">
+          <h4>Lemon Tart</h4>
+          <p>Zesty lemon curd in a buttery pastry shell.</p>
+          <div class="drink-footer"><span class="drink-price">LSL 35</span><button class="add-btn-sm" onclick="addToCart('Lemon Tart',35)"><i class="fas fa-plus"></i></button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-cta">
+      <a href="menu.html#order" class="btn-primary">Order Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Why Jay's</span>
+      <h2>More Than Just a Meal</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon" style="background:linear-gradient(135deg,#8B0000,#cc2200);"><i class="fas fa-heart"></i></div>
+        <h4>Made With Love</h4>
+        <p>Every dish is prepared fresh daily with care and quality ingredients.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" style="background:linear-gradient(135deg,#7a5c00,#b38600);"><i class="fas fa-motorcycle"></i></div>
+        <h4>Own Delivery Riders</h4>
+        <p>Our in-house riders ensure your food arrives hot and on time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" style="background:linear-gradient(135deg,#004d00,#008000);"><i class="fas fa-leaf"></i></div>
+        <h4>Fresh Ingredients</h4>
+        <p>Locally sourced, fresh produce goes into everything we make.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon" style="background:linear-gradient(135deg,#1a005c,#3d00b3);"><i class="fas fa-star"></i></div>
+        <h4>Consistent Quality</h4>
+        <p>We maintain the same high standards every day, every meal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-mark">J</div>
+        <div class="logo-text">
+          <span class="logo-name">Jay's</span>
+          <span class="logo-sub">Restaurant</span>
+        </div>
+      </div>
+      <p class="footer-slogan">"Good Food, Local Flavor"</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/jaysrestaurantLS" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/26658141890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:jaysrestaurant2@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="specials.html">Specials & Drinks</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-hours">
+      <h5>Opening Hours</h5>
+      <p>Monday – Sunday</p>
+      <p><strong>8:00 AM – 8:00 PM</strong></p>
+    </div>
+    <div class="footer-contact">
+      <h5>Contact</h5>
+      <p><i class="fas fa-phone"></i> +266 5814 1890</p>
+      <p><i class="fas fa-envelope"></i> jaysrestaurant2@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Jay's Restaurant. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/26658141890" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+<script>
+function showDrinkTab(tab, btn) {
+  document.querySelectorAll('.drinks-grid').forEach(g => g.style.display = 'none');
+  document.querySelectorAll('.dtab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).style.display = 'grid';
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
